@@ -1,0 +1,21 @@
+{
+  "name": "spredis-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.26",
+    "combine": "^0.1.4",
+    "generic-pool": "^3.2.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "stream-combiner": "^0.2.2",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {}
+}
