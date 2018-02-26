@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "sal sorrentino <sal.sorrentino74@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/salsorrentino/spredis-client.git"
+  },
   "dependencies": {
     "big-integer": "^1.6.26",
     "combine": "^0.1.4",
