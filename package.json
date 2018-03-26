@@ -1,6 +1,6 @@
 {
   "name": "spredis-client",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node client for spredis server.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,6 @@
     "url": "git://github.com/salsorrentino/spredis-client.git"
   },
   "dependencies": {
-    "big-integer": "^1.6.26",
     "combine": "^0.1.4",
     "generic-pool": "^3.2.0",
     "request": "^2.83.0",
