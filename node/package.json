@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "registry":"https://registry.npmjs.org/",
   "author": "sal sorrentino <sal.sorrentino74@gmail.com>",
   "license": "MIT",
   "repository": {
