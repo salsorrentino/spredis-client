@@ -3,12 +3,25 @@
 
 const TCPClient = require('./tcp-client');
 const HTTPClient = require('./http-client');
+const EmbeddedClient = require('./embedded-client');
 
 class Client {
 	constructor(opts, namesapce) {
-		let mode = opts.mode || 'tcp';
-		if (mode !== 'tcp' && mode !== 'http') throw new Error(`unsupported client mode: ${mode} (must be tcp http)`);
-		this.impl = mode === 'tcp' ? new TCPClient(opts, namesapce) : new HTTPClient(opts, namesapce);
+		this.mode = opts.mode || 'tcp';
+		console.log('mode:'. mode);
+		switch(this.mode) {
+			case 'tcp':
+				this.impl = new TCPClient(opts, namesapce);
+				break;
+			case 'http':
+				this.impl = new HTTPClient(opts, namesapce);
+				break;
+			case 'embedded':
+				this.impl = new EmbeddedClient(opts, namesapce);
+				break;
+			default:
+				throw new Error(`unsupported client mode: ${mode} (must be tcp, http or embedded)`);
+		}
 	}
 
 	use(namespace) {
