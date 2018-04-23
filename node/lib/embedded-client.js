@@ -11,6 +11,7 @@ class EmbeddedClient {
 			this.spredis = new Spredis(opts);
 			this.spredis.initialize().catch( e=> {console.error(e.stack);} )
 		}
+		this.assignExpr = opts.assignExpr !== undefined ? opts.assignExpr : true;
 		if (namesapce) this.use(namesapce);
 		// this.baseUrl = opts.url;
 		// let defaults = {
@@ -63,7 +64,7 @@ class EmbeddedClient {
 
 	async search(query, ns) {
 		ns = await this.spredis.useNamespace(ns || this.ns);
-		return await ns.search(query);
+		return resParser((await ns.search(query)), this.assignExpr);
 	}
 
 	quit() {
