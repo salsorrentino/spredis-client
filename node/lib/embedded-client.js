@@ -48,6 +48,11 @@ class EmbeddedClient {
 		return await ns.addDocuments(docs);
 	}
 
+	async reindexDocuments(docs, ns) {
+		ns = await this.spredis.useNamespace(ns || this.ns);
+		return await ns.reindexDocuments(docs);
+	}
+
 	async deleteDocuments(docs, ns) {
 		ns = await this.spredis.useNamespace(ns || this.ns);
 		return await ns.deleteDocuments(docs);

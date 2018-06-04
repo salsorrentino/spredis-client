@@ -5,7 +5,7 @@ module.exports = function (res, assignExpr) {
 			let props = Object.getOwnPropertyNames(res.exprs);
 			for (let i = 0; i < props.length; i++) {
 				let prop = props[i];
-				let values = res.exprs[prop] || [];
+				let values = res.exprs[prop];
 				for (let k = 0; k < values.length; k++) {
 					if (res.items[k]) res.items[k][prop] = values[k];
 				}

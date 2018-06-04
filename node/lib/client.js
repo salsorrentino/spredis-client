@@ -36,6 +36,13 @@ class Client {
 		return this.impl.addDocuments(docs, ns);
 	}
 
+	reindexDocuments(docs, ns) {
+		if (this.impl.reindexDocuments) {
+			return this.impl.reindexDocuments(docs, ns);;	
+		}
+		return this.impl.addDocuments(docs, ns);;
+	}
+	
 	deleteDocuments(docs, ns) {
 		return this.impl.deleteDocuments(docs, ns);
 	}
