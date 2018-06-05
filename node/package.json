@@ -1,6 +1,6 @@
 {
   "name": "spredis-client",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Node client for spredis server.",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "moment": "^2.22.1",
-    "spredis": "^0.2.2"
+    "spredis": "^0.2.4"
   }
 }
